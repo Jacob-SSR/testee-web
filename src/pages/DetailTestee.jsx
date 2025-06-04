@@ -21,7 +21,6 @@ const DetailTestee = () => {
 
   if (!testee) return <p className="text-center mt-10">กำลังโหลดข้อมูล...</p>;
 
-  // ✅ แสดงสถานะใบขับขี่
   const licenseStatus = () => {
     const { physicalTest, theoryTest, practicalTest } = testee;
     if (!physicalTest || !theoryTest || !practicalTest) return "รอพิจารณา";

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const AddPhysicalTest = () => {
-  const { id } = useParams(); // id ของ Testee
+  const { id } = useParams(); 
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -20,8 +20,6 @@ const AddPhysicalTest = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // คำนวณ passed: ถ้าทุกข้อผ่าน
     const passed = form.colorBlind && form.farSight && form.nearSight && form.reaction;
 
     try {

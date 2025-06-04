@@ -11,7 +11,6 @@ const EditTestee = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  // ดึงข้อมูลผู้ทดสอบตอนโหลดหน้า
   useEffect(() => {
     const fetchTestee = async () => {
       try {
@@ -38,7 +37,6 @@ const EditTestee = () => {
         lastName,
       });
       setMessage("แก้ไขข้อมูลสำเร็จ");
-      // กลับไปหน้ารายชื่อหลังแก้ไข
       navigate("/");
     } catch (error) {
       setMessage("เกิดข้อผิดพลาดในการแก้ไขข้อมูล");

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const AddPracticalTest = () => {
@@ -60,13 +60,11 @@ const AddPracticalTest = () => {
 
       alert("บันทึกผลการทดสอบปฏิบัติสำเร็จ!");
 
-      // Reset form
       setFormData({
         testeeId: "",
         passed: "",
       });
 
-      // Refresh testees list
       fetchTestees();
     } catch (error) {
       console.error("Error:", error);
